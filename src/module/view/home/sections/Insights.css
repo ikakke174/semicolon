@@ -1,0 +1,10 @@
+.sc-insights { padding-bottom: 6rem; }
+.sc-insights__list { display: grid; gap: 1.25rem; }
+.sc-insight { display: flex; height: 100%; flex-direction: column; overflow: hidden; border-radius: 0.375rem; border: 1px solid var(--color-line); background: var(--color-tertiary); }
+.sc-insight__body { flex: 1; padding: 1.5rem; }
+.sc-insight__badge { display: inline-block; margin-bottom: 0.75rem; padding: 0.125rem 0.625rem; border-radius: 999px; font-size: 0.75rem; font-weight: 500; background: var(--color-accent-950); color: var(--color-accent-300); }
+.sc-insight__title { font-size: 1rem; line-height: 1.35; font-weight: 600; color: var(--color-white); }
+.sc-insight__text { margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.7; color: var(--color-muted); }
+.sc-insight__image { display: block; width: 100%; height: auto; aspect-ratio: 256 / 156; object-fit: cover; }
+@media (min-width: 640px) { .sc-insights__list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .sc-insights__list { grid-template-columns: repeat(4, 1fr); } }

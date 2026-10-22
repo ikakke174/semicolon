@@ -1,0 +1,28 @@
+.sc-hero { position: relative; overflow: hidden; padding-top: 4rem; }
+.sc-hero__content { position: relative; z-index: 1; padding-block: 3rem 2.5rem; }
+.sc-hero__inner { max-width: 36rem; }
+.sc-hero__title { font-size: 2.25rem; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; color: var(--color-white); }
+.sc-hero__text { max-width: 28rem; margin-top: 1.5rem; font-size: 1rem; line-height: 1.7; color: var(--color-muted); }
+.sc-hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+
+.sc-hero__image {
+  display: block; width: 100%; max-width: 28rem; height: auto; margin-inline: auto;
+  -webkit-mask-image: linear-gradient(to top, transparent, #000 30%);
+  mask-image: linear-gradient(to top, transparent, #000 30%);
+}
+
+@media (min-width: 640px) { .sc-hero__title { font-size: 3rem; } }
+
+@media (min-width: 1024px) {
+  .sc-hero__content { padding-block: 6.5rem 12.5rem; }
+  .sc-hero__title { font-size: 3.75rem; }
+  .sc-hero__image {
+    position: absolute; top: 0; right: 0; bottom: 0; z-index: 0;
+    width: 56%; max-width: none; height: 100%; margin: 0;
+    object-fit: cover; object-position: 55% 22%;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 35%), linear-gradient(to top, transparent, #000 20%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent, #000 35%), linear-gradient(to top, transparent, #000 20%);
+    mask-composite: intersect;
+  }
+}
